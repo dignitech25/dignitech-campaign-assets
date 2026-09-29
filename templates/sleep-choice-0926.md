@@ -21,12 +21,14 @@ clone and must never be described as one.
 ## Design tokens
 
 - Deep navy: `#2c2758`, brand header, footer and primary action.
-- Boundary purple: `#7353ba`, three-pixel outer frame and section dividers.
+- Boundary purple: `#7353ba`, two-pixel section dividers.
 - Soft lavender: `#eee2ff`, section labels and preference panel.
 - White: `#ffffff`, reading panels and high-contrast text on navy.
 - Ink: `#111111`, body copy.
 
-The boundary colour is a named token, not an isolated hard-coded choice. Future
+The template uses continuous 26-pixel navy rails rather than a separate outer outline.
+Every content and action panel shares the same straight edge. The boundary colour is
+a named token, not an isolated hard-coded choice. Future
 campaign variants may change the accent and panel colours after owner review while
 retaining the same structural and accessibility checks.
 
@@ -40,11 +42,10 @@ current Forté Healthcare website and the supplied logo asset:
 
 - Forté blue: `#366382`;
 - Forté dark blue: `#244a67`;
-- Forté mauve: `#775673`;
 - Forté light ground: `#f5f7f9`;
-- Forté mauve ground: `#f3edf2`.
 
 Sleep Choice remains the masthead owner and controls the CTA. Forté appears in a
-smaller `Presented with` lockup. Partner colours shape the educational and event
-panels while the approved Sleep Choice purple remains the outer boundary and footer
-divider. The supplied Forté logo is stored at `assets/forte/forte-logo.png`.
+smaller `Presented with` lockup. Forté blue is restricted to the partner lockup and
+clinical heading. Sleep Choice lavender and purple continue to define the content,
+event and action panels. The supplied Forté logo is stored at
+`assets/forte/forte-logo.png`.
