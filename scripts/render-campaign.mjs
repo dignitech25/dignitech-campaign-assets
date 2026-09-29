@@ -108,7 +108,6 @@ function render(data) {
           </tr>
           <tr>
             <td class="pad" align="center" style="padding:16px 34px 18px;background:${design.lavender};color:${design.navy};border-top:3px solid ${design.purple};">
-              <p style="margin:0 0 10px;font-size:12px;line-height:1.45;color:${design.navy};">Prepared by Sleep Choice for this joint training event. Co-branding relates to this event only.</p>
               <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">Want to change how you receive these emails?</p>
               <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p>
             </td>

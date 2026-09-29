@@ -21,8 +21,7 @@ const required = [
   "border-top:3px solid #7353ba",
   "background:#eee2ff;color:#2c2758",
   "background:#f5f7f9;border-top:3px solid #366382",
-  "background:#f3edf2;border-top:3px solid #775673",
-  "Co-branding relates to this event only."
+  "background:#f3edf2;border-top:3px solid #775673"
 ];
 
 for (const file of files) {
