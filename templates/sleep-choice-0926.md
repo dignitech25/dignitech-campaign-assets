@@ -26,9 +26,11 @@ clone and must never be described as one.
 - White: `#ffffff`, reading panels and high-contrast text on navy.
 - Ink: `#111111`, body copy.
 
-The template uses continuous 26-pixel navy rails rather than a separate outer outline.
-Every content and action panel shares the same straight edge. The boundary colour is
-a named token, not an isolated hard-coded choice. Future
+The template uses one 600-pixel navy perimeter containing a single 548-pixel inset
+content table. The perimeter is structural, not a border applied separately to each
+row. Every content and action panel therefore shares the same straight edge. A single
+two-pixel purple rule separates adjacent sections without doubling or stacking. The
+boundary colour is a named token, not an isolated hard-coded choice. Future
 campaign variants may change the accent and panel colours after owner review while
 retaining the same structural and accessibility checks.
 

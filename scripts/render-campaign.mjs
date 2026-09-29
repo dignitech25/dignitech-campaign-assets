@@ -36,7 +36,7 @@ function render(data) {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${escapeHtml(data.subject)}</title>
   <style>
-    @media only screen and (max-width:620px){.email-shell{width:100%!important}.pad{padding-left:20px!important;padding-right:20px!important}.framed{border-left-width:12px!important;border-right-width:12px!important}.logo{width:100%!important;height:auto!important}.button{width:100%!important;box-sizing:border-box!important}.desktop-break{display:none!important}}
+    @media only screen and (max-width:620px){.email-shell{width:100%!important}.content-frame{width:100%!important}.frame-pad{padding-left:12px!important;padding-right:12px!important}.pad{padding-left:20px!important;padding-right:20px!important}.logo{width:100%!important;height:auto!important}.button{width:100%!important;box-sizing:border-box!important}.desktop-break{display:none!important}}
   </style>
 </head>
 <body style="margin:0;padding:0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;">
@@ -51,43 +51,49 @@ function render(data) {
             </td>
           </tr>
           <tr>
-            <td class="pad framed" align="center" style="padding:13px 34px 14px;background:${design.forteGround};border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};border-top:2px solid ${design.forteBlue};border-bottom:2px solid ${design.forteBlue};">
-              <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.3;font-weight:bold;letter-spacing:1.4px;color:${design.forteDarkBlue};text-transform:uppercase;">Presented with</p>
-              <img src="${forteLogoUrl}" width="180" alt="Forté Healthcare" style="display:block;width:180px;max-width:52%;height:auto;border:0;">
-            </td>
-          </tr>
-          <tr>
-            <td class="pad framed" style="padding:22px 34px 16px;background:${design.white};border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};">
-              <p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>
-              ${intro}
-            </td>
-          </tr>
-          <tr>
-            <td class="pad framed" align="center" style="padding:18px 34px;background:${design.lavender};border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};border-top:2px solid ${design.purple};border-bottom:2px solid ${design.purple};">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.forteDarkBlue};">${escapeHtml(data.sectionTitle)}</h2>
-            </td>
-          </tr>
-          <tr>
-            <td class="pad framed" style="padding:22px 34px 6px;background:#ffffff;border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};">
-              ${body}
-            </td>
-          </tr>
-          <tr>
-            <td class="pad framed" align="center" style="padding:18px 34px;background:${design.lavender};border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};border-top:2px solid ${design.purple};border-bottom:2px solid ${design.purple};">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.eventTitle)}</h2>
-            </td>
-          </tr>
-          <tr>
-            <td class="pad framed" align="center" style="padding:22px 34px 26px;background:#ffffff;border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};">
-              <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.date)}</strong></p>
-              <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.time)}</p>
-              <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.venue)}</strong></p>
-              <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.address)}</p>
-              <p style="margin:0 0 24px;font-size:16px;line-height:1.5;color:#111111;">${escapeHtml(data.detail)}</p>
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+            <td class="frame-pad" align="center" style="padding:0 26px;background:${design.navy};">
+              <table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
                 <tr>
-                  <td align="center" bgcolor="#2c2758" style="border-radius:36px;">
-                    <a class="button" href="${escapeHtml(data.ctaUrl)}" target="_blank" style="display:inline-block;width:330px;padding:15px 18px;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.2;font-weight:bold;color:#ffffff;text-decoration:none;background:#2c2758;border-radius:36px;box-sizing:border-box;">${escapeHtml(data.ctaLabel)}</a>
+                  <td class="pad" align="center" style="padding:13px 34px 14px;background:${design.forteGround};border-top:2px solid ${design.purple};border-bottom:2px solid ${design.purple};">
+                    <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.3;font-weight:bold;letter-spacing:1.4px;color:${design.forteBlue};text-transform:uppercase;">Presented with</p>
+                    <img src="${forteLogoUrl}" width="180" alt="Forté Healthcare" style="display:block;width:180px;max-width:52%;height:auto;border:0;">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad" style="padding:22px 34px 16px;background:${design.white};border-bottom:2px solid ${design.purple};">
+                    <p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>
+                    ${intro}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad" align="center" style="padding:18px 34px;background:${design.lavender};border-bottom:2px solid ${design.purple};">
+                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.forteDarkBlue};">${escapeHtml(data.sectionTitle)}</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad" style="padding:22px 34px 6px;background:${design.white};border-bottom:2px solid ${design.purple};">
+                    ${body}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad" align="center" style="padding:18px 34px;background:${design.lavender};border-bottom:2px solid ${design.purple};">
+                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.eventTitle)}</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad" align="center" style="padding:22px 34px 26px;background:${design.white};">
+                    <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.date)}</strong></p>
+                    <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.time)}</p>
+                    <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.venue)}</strong></p>
+                    <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.address)}</p>
+                    <p style="margin:0 0 24px;font-size:16px;line-height:1.5;color:#111111;">${escapeHtml(data.detail)}</p>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
+                      <tr>
+                        <td align="center" bgcolor="#2c2758" style="border-radius:36px;">
+                          <a class="button" href="${escapeHtml(data.ctaUrl)}" target="_blank" style="display:inline-block;width:330px;padding:15px 18px;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.2;font-weight:bold;color:#ffffff;text-decoration:none;background:#2c2758;border-radius:36px;box-sizing:border-box;">${escapeHtml(data.ctaLabel)}</a>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
@@ -105,9 +111,15 @@ function render(data) {
             </td>
           </tr>
           <tr>
-            <td class="pad framed" align="center" style="padding:14px 34px 16px;background:${design.lavender};color:${design.navy};border-left:26px solid ${design.navy};border-right:26px solid ${design.navy};border-top:2px solid ${design.purple};border-bottom:20px solid ${design.navy};">
-              <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">Want to change how you receive these emails?</p>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p>
+            <td class="frame-pad" align="center" style="padding:0 26px 20px;background:${design.navy};">
+              <table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
+                <tr>
+                  <td class="pad" align="center" style="padding:14px 34px 16px;background:${design.lavender};color:${design.navy};border-top:2px solid ${design.purple};">
+                    <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">Want to change how you receive these emails?</p>
+                    <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
         </table>
