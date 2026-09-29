@@ -32,3 +32,19 @@ retaining the same structural and accessibility checks.
 
 Preference links sit on the lavender panel rather than the navy footer because some
 email clients override link colours. The separation preserves readable contrast.
+
+## Forté event variant
+
+The Forté training campaign uses a secondary partner configuration derived from the
+current Forté Healthcare website and the supplied logo asset:
+
+- Forté blue: `#366382`;
+- Forté dark blue: `#244a67`;
+- Forté mauve: `#775673`;
+- Forté light ground: `#f5f7f9`;
+- Forté mauve ground: `#f3edf2`.
+
+Sleep Choice remains the masthead owner and controls the CTA. Forté appears in a
+smaller `Presented with` lockup. Partner colours shape the educational and event
+panels while the approved Sleep Choice purple remains the outer boundary and footer
+divider. The supplied Forté logo is stored at `assets/forte/forte-logo.png`.

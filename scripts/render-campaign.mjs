@@ -5,12 +5,18 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const campaignDir = join(root, "campaigns", "forte-brighton-east-2026");
 const logoUrl = "https://dignitech25.github.io/dignitech-campaign-assets/assets/sleep-choice/logo-white.png";
+const forteLogoUrl = "https://dignitech25.github.io/dignitech-campaign-assets/assets/forte/forte-logo.png";
 const design = {
   navy: "#2c2758",
   purple: "#7353ba",
   lavender: "#eee2ff",
   white: "#ffffff",
-  ink: "#111111"
+  ink: "#111111",
+  forteBlue: "#366382",
+  forteDarkBlue: "#244a67",
+  forteMauve: "#775673",
+  forteGround: "#f5f7f9",
+  forteMauveGround: "#f3edf2"
 };
 
 const escapeHtml = (value) => String(value)
@@ -47,14 +53,20 @@ function render(data) {
             </td>
           </tr>
           <tr>
-            <td class="pad" style="padding:24px 34px 20px;background:${design.white};border-top:3px solid ${design.purple};">
+            <td class="pad" align="center" style="padding:15px 34px 16px;background:${design.forteGround};border-top:3px solid ${design.purple};border-bottom:3px solid ${design.forteBlue};">
+              <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.3;font-weight:bold;letter-spacing:1.4px;color:${design.forteDarkBlue};text-transform:uppercase;">Presented with</p>
+              <img src="${forteLogoUrl}" width="180" alt="Forté Healthcare" style="display:block;width:180px;max-width:52%;height:auto;border:0;">
+            </td>
+          </tr>
+          <tr>
+            <td class="pad" style="padding:24px 34px 20px;background:${design.white};">
               <p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>
               ${intro}
             </td>
           </tr>
           <tr>
-            <td class="pad" align="center" style="padding:20px 34px;background:${design.lavender};border-top:3px solid ${design.purple};border-bottom:3px solid ${design.purple};">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.sectionTitle)}</h2>
+            <td class="pad" align="center" style="padding:20px 34px;background:${design.forteGround};border-top:3px solid ${design.forteBlue};border-bottom:3px solid ${design.forteBlue};">
+              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.forteDarkBlue};">${escapeHtml(data.sectionTitle)}</h2>
             </td>
           </tr>
           <tr>
@@ -63,8 +75,8 @@ function render(data) {
             </td>
           </tr>
           <tr>
-            <td class="pad" align="center" style="padding:20px 34px;background:${design.lavender};border-top:3px solid ${design.purple};border-bottom:3px solid ${design.purple};">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.eventTitle)}</h2>
+            <td class="pad" align="center" style="padding:20px 34px;background:${design.forteMauveGround};border-top:3px solid ${design.forteMauve};border-bottom:3px solid ${design.forteMauve};">
+              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.forteMauve};">${escapeHtml(data.eventTitle)}</h2>
             </td>
           </tr>
           <tr>
@@ -96,6 +108,7 @@ function render(data) {
           </tr>
           <tr>
             <td class="pad" align="center" style="padding:16px 34px 18px;background:${design.lavender};color:${design.navy};border-top:3px solid ${design.purple};">
+              <p style="margin:0 0 10px;font-size:12px;line-height:1.45;color:${design.navy};">Prepared by Sleep Choice for this joint training event. Co-branding relates to this event only.</p>
               <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">Want to change how you receive these emails?</p>
               <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p>
             </td>

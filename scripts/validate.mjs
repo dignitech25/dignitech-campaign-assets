@@ -7,6 +7,8 @@ const campaignDir = join(root, "campaigns", "forte-brighton-east-2026");
 const files = ["wave-1-relationship-ots.html", "wave-2-verified-new-ots.html"];
 const required = [
   "assets/sleep-choice/logo-white.png",
+  "assets/forte/forte-logo.png",
+  "Presented with",
   "$[UD:FIRST_NAME||]$",
   "David 0404 593 090",
   "Alex 0452 002 450",
@@ -17,7 +19,10 @@ const required = [
   "351 Nepean Highway, Brighton East",
   "border:3px solid #7353ba",
   "border-top:3px solid #7353ba",
-  "background:#eee2ff;color:#2c2758"
+  "background:#eee2ff;color:#2c2758",
+  "background:#f5f7f9;border-top:3px solid #366382",
+  "background:#f3edf2;border-top:3px solid #775673",
+  "Co-branding relates to this event only."
 ];
 
 for (const file of files) {
