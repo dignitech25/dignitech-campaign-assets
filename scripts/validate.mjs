@@ -14,7 +14,10 @@ const required = [
   "$[LI:UNSUBSCRIBE]$",
   "$[LI:SUB_PREF]$",
   "fortehealthcare.com.au/event/sleep-choice-brighton-east-ot-cpd-training/",
-  "351 Nepean Highway, Brighton East"
+  "351 Nepean Highway, Brighton East",
+  "border:3px solid #7353ba",
+  "border-top:3px solid #7353ba",
+  "background:#eee2ff;color:#2c2758"
 ];
 
 for (const file of files) {

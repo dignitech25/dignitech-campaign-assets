@@ -17,3 +17,18 @@ The master uses:
 
 The renderer is an external HTML master. It is not a Zoho drag-and-drop template
 clone and must never be described as one.
+
+## Design tokens
+
+- Deep navy: `#2c2758`, brand header, footer and primary action.
+- Boundary purple: `#7353ba`, three-pixel outer frame and section dividers.
+- Soft lavender: `#eee2ff`, section labels and preference panel.
+- White: `#ffffff`, reading panels and high-contrast text on navy.
+- Ink: `#111111`, body copy.
+
+The boundary colour is a named token, not an isolated hard-coded choice. Future
+campaign variants may change the accent and panel colours after owner review while
+retaining the same structural and accessibility checks.
+
+Preference links sit on the lavender panel rather than the navy footer because some
+email clients override link colours. The separation preserves readable contrast.

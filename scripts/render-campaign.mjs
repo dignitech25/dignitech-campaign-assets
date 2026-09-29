@@ -5,6 +5,13 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const campaignDir = join(root, "campaigns", "forte-brighton-east-2026");
 const logoUrl = "https://dignitech25.github.io/dignitech-campaign-assets/assets/sleep-choice/logo-white.png";
+const design = {
+  navy: "#2c2758",
+  purple: "#7353ba",
+  lavender: "#eee2ff",
+  white: "#ffffff",
+  ink: "#111111"
+};
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -13,7 +20,7 @@ const escapeHtml = (value) => String(value)
   .replaceAll('"', "&quot;")
   .replaceAll("'", "&#39;");
 
-const paragraph = (value) => `<p style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:center;">${escapeHtml(value)}</p>`;
+const paragraph = (value) => `<p style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:${design.ink};text-align:center;">${escapeHtml(value)}</p>`;
 
 function render(data) {
   const intro = data.intro.map(paragraph).join("");
@@ -33,21 +40,21 @@ function render(data) {
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border-collapse:collapse;">
     <tr>
       <td align="center" style="padding:40px 0;background:#ffffff;">
-        <table role="presentation" class="email-shell" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;background:#2c2758;border-collapse:collapse;">
+        <table role="presentation" class="email-shell" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;background:${design.navy};border:3px solid ${design.purple};border-collapse:collapse;">
           <tr>
             <td align="center" style="padding:7px 15px;background:#2c2758;">
               <img class="logo" src="${logoUrl}" width="570" alt="Sleep Choice. Try, Sleep, Decide." style="display:block;width:570px;max-width:100%;height:auto;border:0;">
             </td>
           </tr>
           <tr>
-            <td class="pad" style="padding:24px 34px 20px;background:#ffffff;border-top:2px solid #5b4fa1;">
+            <td class="pad" style="padding:24px 34px 20px;background:${design.white};border-top:3px solid ${design.purple};">
               <p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>
               ${intro}
             </td>
           </tr>
           <tr>
-            <td class="pad" align="center" style="padding:20px 34px;background:#eedeff;border-top:2px solid #2c2758;border-bottom:2px solid #5b4fa1;">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${escapeHtml(data.sectionTitle)}</h2>
+            <td class="pad" align="center" style="padding:20px 34px;background:${design.lavender};border-top:3px solid ${design.purple};border-bottom:3px solid ${design.purple};">
+              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.sectionTitle)}</h2>
             </td>
           </tr>
           <tr>
@@ -56,8 +63,8 @@ function render(data) {
             </td>
           </tr>
           <tr>
-            <td class="pad" align="center" style="padding:20px 34px;background:#eedeff;border-top:2px solid #2c2758;border-bottom:2px solid #5b4fa1;">
-              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${escapeHtml(data.eventTitle)}</h2>
+            <td class="pad" align="center" style="padding:20px 34px;background:${design.lavender};border-top:3px solid ${design.purple};border-bottom:3px solid ${design.purple};">
+              <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.eventTitle)}</h2>
             </td>
           </tr>
           <tr>
@@ -70,14 +77,14 @@ function render(data) {
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
                 <tr>
                   <td align="center" bgcolor="#2c2758" style="border-radius:36px;">
-                    <a class="button" href="${escapeHtml(data.ctaUrl)}" target="_blank" style="display:inline-block;width:330px;padding:15px 18px;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.2;font-weight:bold;color:#ffffff;text-decoration:none;background:#2c2758;border-radius:36px;box-sizing:border-box;">${escapeHtml(data.ctaLabel)}</a>
+                    <a class="button" href="${escapeHtml(data.ctaUrl)}" target="_blank" style="display:inline-block;width:330px;padding:15px 18px;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.2;font-weight:bold;color:#ffffff;text-decoration:none;background:#2c2758;border:2px solid ${design.purple};border-radius:36px;box-sizing:border-box;">${escapeHtml(data.ctaLabel)}</a>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
           <tr>
-            <td class="pad" align="center" style="padding:20px 34px 24px;background:#2c2758;color:#ffffff;">
+            <td class="pad" align="center" style="padding:20px 34px 24px;background:#2c2758;color:#ffffff;border-top:3px solid ${design.purple};">
               <p style="margin:0 0 18px;font-size:16px;line-height:1.5;color:#ffffff;">Warm regards,</p>
               <p style="margin:0;font-size:16px;line-height:1.5;color:#ffffff;"><strong>David 0404 593 090</strong></p>
               <p style="margin:0 0 16px;font-size:16px;line-height:1.5;color:#ffffff;"><strong>Alex 0452 002 450</strong></p>
@@ -85,8 +92,12 @@ function render(data) {
               <p style="margin:0 0 20px;font-size:16px;line-height:1.5;"><a href="https://www.sleepchoice.com.au" target="_blank" style="color:#ffffff;text-decoration:underline;">sleepchoice.com.au</a></p>
               <p style="margin:0;font-size:15px;line-height:1.5;color:#ffffff;"><em>Note: NDIS and Aged Care packages typically do not fund equipment trials. Sleep Choice covers the 7-day in-home trial at no cost to the participant.</em></p>
               <p style="margin:0 0 22px;font-size:15px;line-height:1.5;color:#ffffff;"><em>(service area limits apply)</em></p>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:#ffffff;">Want to change how you receive these emails?</p>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:#ffffff;">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:#ffffff;text-decoration:underline;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:#ffffff;text-decoration:underline;">Update your preferences</a>.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="pad" align="center" style="padding:16px 34px 18px;background:${design.lavender};color:${design.navy};border-top:3px solid ${design.purple};">
+              <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">Want to change how you receive these emails?</p>
+              <p style="margin:0;font-size:14px;line-height:1.5;color:${design.navy};">You can <a href="http://$[LI:UNSUBSCRIBE]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" target="_blank" style="color:${design.navy}!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p>
             </td>
           </tr>
         </table>
