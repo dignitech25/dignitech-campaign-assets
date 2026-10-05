@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const campaignDir = join(root, "campaigns", "forte-brighton-east-2026");
-const files = ["wave-1-relationship-ots.html", "wave-2-verified-new-ots.html"];
+const files = ["wave-1-relationship-ots.html", "wave-2-verified-new-ots.html", "recovery-nonopeners.html"];
 const required = [
   "assets/sleep-choice/logo-white.png",
   "assets/forte/forte-logo.png",
