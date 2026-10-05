@@ -130,7 +130,7 @@ function render(data) {
 </html>`;
 }
 
-for (const file of ["wave-1.json", "wave-2.json"]) {
+for (const file of ["wave-1.json", "wave-2.json", "recovery-nonopeners.json"]) {
   const data = JSON.parse(await readFile(join(campaignDir, file), "utf8"));
   await writeFile(join(campaignDir, `${data.slug}.html`), render(data));
 }
