@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -130,7 +130,11 @@ function render(data) {
 </html>`;
 }
 
-for (const file of ["wave-1.json", "wave-2.json", "recovery-nonopeners.json"]) {
+const campaignFiles = (await readdir(campaignDir))
+  .filter((file) => file.endsWith(".json"))
+  .sort();
+
+for (const file of campaignFiles) {
   const data = JSON.parse(await readFile(join(campaignDir, file), "utf8"));
   await writeFile(join(campaignDir, `${data.slug}.html`), render(data));
 }
