@@ -106,7 +106,7 @@ function render(data) {
               <p style="margin:0 0 16px;font-size:16px;line-height:1.5;color:#ffffff;"><strong>Alex 0452 002 450</strong></p>
               <p style="margin:0;font-size:16px;line-height:1.5;color:#ffffff;"><strong>The Sleep Choice x Supply Ministry Team</strong></p>
               <p style="margin:0 0 20px;font-size:16px;line-height:1.5;"><a href="https://www.sleepchoice.com.au" target="_blank" style="color:#ffffff;text-decoration:underline;">sleepchoice.com.au</a></p>
-              <p style="margin:0;font-size:15px;line-height:1.5;color:#ffffff;"><em>Note: NDIS and Aged Care packages typically do not fund equipment trials. Sleep Choice covers the 7-day in-home trial at no cost to the participant.</em></p>
+              <p style="margin:0;font-size:15px;line-height:1.5;color:#ffffff;"><em>${escapeHtml(data.trialFooterText ?? "Note: NDIS and Aged Care packages typically do not fund equipment trials. Sleep Choice covers the 7-day in-home trial at no cost to the participant.")}</em></p>
               <p style="margin:0 0 8px;font-size:15px;line-height:1.5;color:#ffffff;"><em>(service area limits apply)</em></p>
             </td>
           </tr>
