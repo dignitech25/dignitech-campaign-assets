@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node scripts/render-campaign.mjs",
-    "test": "node scripts/validate.mjs"
+    "build": "node scripts/render-campaign.mjs && node scripts/render-engagement.mjs && node scripts/render-supply-engagement.mjs",
+    "test": "node scripts/validate.mjs && node scripts/validate-engagement.mjs && node --test test/engagement-renderers.test.mjs"
   }
 }
