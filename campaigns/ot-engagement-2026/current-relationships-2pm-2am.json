@@ -1,27 +1,27 @@
 {
   "slug": "current-relationships-2pm-2am-20261022",
   "brand": "sleep-choice-0926",
-  "subject": "What should the trial help you learn by 2am?",
-  "preheader": "Four practical questions for a bed or mattress trial at home.",
+  "subject": "What needs another look?",
+  "preheader": "If a bed, mattress or overnight setup is not quite right, bring it back to us.",
   "intro": [
-    "A showroom assessment can give you a useful first impression of a bed or mattress.",
-    "The questions often change once the equipment is used through an ordinary night at home."
+    "You have worked with us before, so this is not an introduction to home trials.",
+    "It is a simple check-in. If a setup has changed, stopped working as expected or a new client brief is becoming complicated, David and Alex want to hear about it."
   ],
-  "sectionTitle": "Start with the decision, not the product",
+  "sectionTitle": "The work does not finish at delivery",
   "body": [
-    "Before arranging a trial, it can help to define what the trial needs to clarify. That keeps the equipment discussion connected to the person's actual routine and the clinician's judgement.",
-    "The relevant observations might include settling, repositioning, returning from the bathroom or getting up in the morning. They will be different for every person."
+    "The real test begins when the equipment is used at home. Needs change. A configuration may need adjustment. A new brief may also depend on what was learned from the last one.",
+    "We can help review the setup, arrange another trial or work through the next bed and mattress decision with you."
   ],
   "questions": [
-    "What decision should the trial help you make?",
-    "Which known concerns need observation through ordinary use?",
-    "Which tasks are difficult in the current setup?",
-    "What observations would help you judge suitability?"
+    "A previous setup needs adjustment or review.",
+    "A new bed or mattress brief needs a home trial.",
+    "Several pieces of equipment need to work together."
   ],
-  "actionTitle": "Bring one equipment question",
-  "actionText": "Sleep Choice can help configure and coordinate an in-home trial around the equipment question you are trying to resolve. You do not need to have selected the exact product first.",
-  "ctaLabel": "REPLY WITH A DE-IDENTIFIED QUESTION",
-  "ctaUrl": "mailto:david@sleepchoice.com.au?subject=2pm%20versus%202am%20trial%20question",
-  "boundary": "A home trial supports the equipment discussion. It does not replace clinical assessment or guarantee suitability, improved sleep or a clinical outcome.",
+  "actionTitle": "What are you working on now?",
+  "actionText": "Reply with the person, the practical problem and what has changed. We will pick it up from there and work out the most useful next step with you.",
+  "ctaLabel": "DISCUSS A CURRENT CLIENT BRIEF",
+  "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Current%20client%20equipment%20brief",
+  "boundary": "",
+  "teamName": "The Sleep Choice Team",
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case."
 }

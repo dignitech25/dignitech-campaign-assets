@@ -19,9 +19,10 @@
     "What evidence would help support the next decision?"
   ],
   "actionTitle": "Bring us the question, not a product code",
-  "actionText": "Sleep Choice can help configure and coordinate an in-home bed or mattress trial around the question you are trying to resolve. If there is a current brief, reply with a de-identified outline and we will help work through the trial options.",
-  "ctaLabel": "REPLY WITH THE TRIAL QUESTION",
+  "actionText": "Sleep Choice can help configure and coordinate an in-home bed or mattress trial around the question you are trying to resolve. Send us the person, their goals, the current setup and the equipment decision you need to make.",
+  "ctaLabel": "DISCUSS A CURRENT CLIENT BRIEF",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Current%202pm%20versus%202am%20trial%20question",
-  "boundary": "A home trial supports the equipment discussion. It does not replace clinical assessment or guarantee suitability, improved sleep or a clinical outcome.",
+  "boundary": "",
+  "teamName": "The Sleep Choice Team",
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case."
 }

@@ -1,27 +1,27 @@
 {
   "slug": "new-ot-trial-framework-20261022",
   "brand": "sleep-choice-0926",
-  "subject": "What should a bed trial prove before prescription?",
-  "preheader": "A practical 2pm versus 2am framework for beds and mattresses used at home.",
+  "subject": "The mattress decision changed at 2am",
+  "preheader": "A seven-night home trial revealed what a short assessment could not.",
   "intro": [
-    "A bed or mattress trial should do more than confirm that the equipment feels comfortable during an appointment.",
-    "For many briefs, the useful information appears later, once the equipment is being used through an ordinary night at home."
+    "Her OT knew she needed a profiling bed. The mattress was harder to call.",
+    "She lived alone and was struggling with transfers, so we brought two mattresses to her home and let her use them across seven nights."
   ],
-  "sectionTitle": "The 2pm versus 2am test",
+  "sectionTitle": "Then the real problem appeared",
   "body": [
-    "At 2pm, the setup may look appropriate. At 2am, the practical questions can be different: repositioning, returning from the bathroom, transfers, comfort changes or how the configuration works with the person's routine.",
-    "Starting with the question keeps the trial connected to the decision rather than reducing it to a product demonstration."
+    "During the trial, her family noticed that she could not turn in bed at night. It had not been obvious during the earlier assessment or from a product specification.",
+    "Because the equipment was still being trialled, the issue could be addressed before the final choice. The OT had real-use information for the funding application, and the client could choose the mattress that worked better for her at home."
   ],
   "questions": [
-    "What decision does the trial need to inform?",
-    "Which overnight tasks or concerns matter in this brief?",
-    "Which configuration should be tested or compared?",
-    "What observations would help determine the next step?"
+    "Two mattresses were compared in the person's own bedroom.",
+    "The overnight turning difficulty surfaced during ordinary use.",
+    "The final choice reflected what happened across the week, not a short appointment."
   ],
-  "actionTitle": "A practical route for the next brief",
-  "actionText": "Sleep Choice helps OTs configure and coordinate in-home trials for beds and mattresses. You do not need to arrive with a product selected. Send us a de-identified outline of the equipment question and we can help identify a sensible trial pathway.",
-  "ctaLabel": "SEND A DE-IDENTIFIED BRIEF",
+  "actionTitle": "Have a bed or mattress brief that needs testing?",
+  "actionText": "Send us the person, their goals, the current setup and the decision you are trying to make. Sleep Choice can help configure and coordinate a seven-night in-home trial before the final equipment choice.",
+  "ctaLabel": "DISCUSS A HOME TRIAL",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Bed%20or%20mattress%20trial%20brief",
-  "boundary": "A home trial supports the equipment discussion. It does not replace clinical assessment or guarantee suitability, improved sleep or a clinical outcome.",
+  "boundary": "",
+  "teamName": "The Sleep Choice Team",
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case."
 }

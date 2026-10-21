@@ -1,27 +1,28 @@
 {
   "slug": "complex-paediatric-overnight-trial-20261022",
   "brand": "sleep-choice-0926",
-  "subject": "What changes between bedtime and 2am?",
-  "preheader": "Frame the overnight equipment question before arranging a complex paediatric trial.",
+  "subject": "The bed has to work for the person helping at 2am",
+  "preheader": "Complex overnight support is a whole-room problem, not only a mattress question.",
   "intro": [
-    "For a child or young person with complex physical support needs, what looks workable at 2pm may not answer the questions that emerge at 2am.",
-    "The purpose of a home trial is not to promise an outcome. It is to help the clinical and family discussion draw on observations from ordinary use."
+    "For a child or young person with complex physical support needs, the bed decision affects more than comfort.",
+    "It has to work for positioning, transfers, care routines, the people providing assistance and the other equipment already in the room."
   ],
-  "sectionTitle": "Start with the overnight situation",
+  "sectionTitle": "Test the whole overnight setup",
   "body": [
-    "The relevant question may involve positioning, transfers, care routines, access, configuration or how the equipment works within the home environment.",
-    "Being clear about that question helps everyone understand what should be observed and what the trial can realistically contribute."
+    "A mattress may feel appropriate while the bed height makes a transfer harder. A side or accessory may help one task and obstruct another. The support person may not have the access they need once everything is in the room.",
+    "A useful home trial brings the person, support routine, room and equipment together before the final decision."
   ],
   "questions": [
-    "Which overnight routine or task needs to be understood?",
-    "Who needs to use or support the equipment at home?",
-    "Which configuration variables need to be tested?",
-    "What observations would be useful to the clinical decision?"
+    "Can the person be positioned and repositioned as intended?",
+    "Can family or support workers provide assistance from the space available?",
+    "Does the bed, mattress and transfer equipment work as one setup?",
+    "What needs to change before the OT recommends the next step?"
   ],
-  "actionTitle": "Talk through the trial before choosing the product",
-  "actionText": "Sleep Choice can help OTs work through a bed or mattress trial pathway for a complex brief. Reply with a de-identified equipment question and we will help determine whether an in-home trial is practical and what needs to be configured.",
-  "ctaLabel": "DISCUSS A COMPLEX TRIAL BRIEF",
+  "actionTitle": "Bring us the complete overnight brief",
+  "actionText": "Send us the person, their goals, the support routine, the room constraints and the equipment already involved. We will help work through whether a home trial is practical and what needs to be configured together.",
+  "ctaLabel": "DISCUSS A COMPLEX SLEEP SETUP",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Complex%20paediatric%20trial%20brief",
-  "boundary": "A home trial supports the equipment discussion. It does not replace clinical assessment, family and care-team input, safeguarding requirements or individual clinical judgement.",
+  "boundary": "",
+  "teamName": "The Sleep Choice Team",
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case."
 }
