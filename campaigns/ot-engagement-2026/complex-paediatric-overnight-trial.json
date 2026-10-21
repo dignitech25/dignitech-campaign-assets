@@ -15,11 +15,11 @@
   "questions": [
     "Can the person be positioned and repositioned as intended?",
     "Can family or support workers provide assistance from the space available?",
-    "Does the bed, mattress and transfer equipment work as one setup?",
+    "Do the bed, mattress and transfer equipment work together?",
     "What needs to change before the OT recommends the next step?"
   ],
-  "actionTitle": "Bring us the complete overnight brief",
-  "actionText": "Send us the person, their goals, the support routine, the room constraints and the equipment already involved. We will help work through whether a home trial is practical and what needs to be configured together.",
+  "actionTitle": "Planning a complex sleep setup?",
+  "actionText": "Tell us about the person's needs and goals, their overnight support routine, the room and the equipment already being used. We'll help work out what should be trialled together and whether an in-home trial is practical.",
   "ctaLabel": "DISCUSS A COMPLEX SLEEP SETUP",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Complex%20paediatric%20trial%20brief",
   "boundary": "",
