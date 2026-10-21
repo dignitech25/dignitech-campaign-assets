@@ -1,0 +1,21 @@
+{
+  "kind": "engagement",
+  "slug": "supply-ministry-one-practical-brief",
+  "brand": "supply-ministry-review",
+  "subject": "A sourcing contact for the whole equipment brief",
+  "preheader": "Introducing Supply Ministry: practical help with options, trials and coordinated quotes.",
+  "intro": [
+    "I am David from Supply Ministry. We help occupational therapists and care teams source and coordinate assistive technology across equipment categories.",
+    "If we have not worked together, a useful way to start is with a practical requirement that needs more than a product link."
+  ],
+  "sectionTitle": "What needs to work together?",
+  "body": [
+    "That might involve a hoist and commode, mobility equipment and room access, or several items that need to be considered alongside a trial or delivery arrangement.",
+    "You bring the functional requirements and clinical direction. We can help explore sourcing options, identify what still needs checking and bring the equipment requirements into a coordinated quote discussion.",
+    "Exact suitability, compatibility, availability and trial arrangements need to be confirmed for each brief. A clear picture of the person’s goals and practical constraints is a better starting point than an assumed package."
+  ],
+  "actionTitle": "Send the question before the shopping list",
+  "actionText": "Reply with two or three de-identified lines about what needs to be organised. We can discuss the requirement and whether Supply Ministry is the right fit to help.",
+  "ctaLabel": "START AN EQUIPMENT DISCUSSION",
+  "ctaUrl": "mailto:david@supplyministry.com.au?subject=New%20equipment%20brief"
+}

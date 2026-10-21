@@ -1,5 +1,5 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -26,7 +26,9 @@ const escapeHtml = (value) => String(value)
 
 const paragraph = (value) => `<p style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:${design.ink};text-align:left;">${escapeHtml(value)}</p>`;
 
-function render(data) {
+export function render(data) {
+  const engagement = data.kind === "engagement";
+  if (engagement && data.brand !== "sleep-choice-0926") throw new Error("The Sleep Choice renderer cannot render another brand.");
   const intro = data.intro.map(paragraph).join("");
   const body = data.body.map(paragraph).join("");
   return `<!doctype html>
@@ -53,12 +55,12 @@ function render(data) {
           <tr>
             <td class="frame-pad" align="center" style="padding:0 26px;background:${design.navy};">
               <table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
-                <tr>
+                ${engagement ? "<!-- Standalone Sleep Choice engagement -->" : `<tr>
                   <td class="pad" align="center" style="padding:13px 34px 14px;background:${design.forteGround};border-top:2px solid ${design.purple};border-bottom:2px solid ${design.purple};">
                     <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.3;font-weight:bold;letter-spacing:1.4px;color:${design.forteBlue};text-transform:uppercase;">Presented with</p>
                     <img src="${forteLogoUrl}" width="180" alt="Forté Healthcare" style="display:block;width:180px;max-width:52%;height:auto;border:0;">
                   </td>
-                </tr>
+                </tr>`}
                 <tr>
                   <td class="pad" style="padding:22px 34px 16px;background:${design.white};border-bottom:2px solid ${design.purple};">
                     <p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>
@@ -67,7 +69,7 @@ function render(data) {
                 </tr>
                 <tr>
                   <td class="pad" align="center" style="padding:18px 34px;background:${design.lavender};border-bottom:2px solid ${design.purple};">
-                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.forteDarkBlue};">${escapeHtml(data.sectionTitle)}</h2>
+                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${engagement ? design.navy : design.forteDarkBlue};">${escapeHtml(data.sectionTitle)}</h2>
                   </td>
                 </tr>
                 <tr>
@@ -77,16 +79,16 @@ function render(data) {
                 </tr>
                 <tr>
                   <td class="pad" align="center" style="padding:18px 34px;background:${design.lavender};border-bottom:2px solid ${design.purple};">
-                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(data.eventTitle)}</h2>
+                    <h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:${design.navy};">${escapeHtml(engagement ? data.actionTitle : data.eventTitle)}</h2>
                   </td>
                 </tr>
                 <tr>
                   <td class="pad" align="center" style="padding:22px 34px 26px;background:${design.white};">
-                    <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.date)}</strong></p>
+                    ${engagement ? `<p style="margin:0 0 24px;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${escapeHtml(data.actionText)}</p>` : `<p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.date)}</strong></p>
                     <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.time)}</p>
                     <p style="margin:0 0 4px;font-size:17px;line-height:1.5;color:#111111;"><strong>${escapeHtml(data.venue)}</strong></p>
                     <p style="margin:0 0 22px;font-size:17px;line-height:1.5;color:#111111;">${escapeHtml(data.address)}</p>
-                    <p style="margin:0 0 24px;font-size:16px;line-height:1.5;color:#111111;">${escapeHtml(data.detail)}</p>
+                    <p style="margin:0 0 24px;font-size:16px;line-height:1.5;color:#111111;">${escapeHtml(data.detail)}</p>`}
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;">
                       <tr>
                         <td align="center" bgcolor="#2c2758" style="border-radius:36px;">
@@ -130,11 +132,10 @@ function render(data) {
 </html>`;
 }
 
-const campaignFiles = (await readdir(campaignDir))
-  .filter((file) => file.endsWith(".json"))
-  .sort();
-
-for (const file of campaignFiles) {
-  const data = JSON.parse(await readFile(join(campaignDir, file), "utf8"));
-  await writeFile(join(campaignDir, `${data.slug}.html`), render(data));
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const campaignFiles = (await readdir(campaignDir)).filter((file) => file.endsWith(".json")).sort();
+  for (const file of campaignFiles) {
+    const data = JSON.parse(await readFile(join(campaignDir, file), "utf8"));
+    await writeFile(join(campaignDir, `${data.slug}.html`), render(data));
+  }
 }
