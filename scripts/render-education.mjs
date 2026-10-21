@@ -1,0 +1,34 @@
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const campaignDir = join(root, "campaigns", "ot-engagement-2026");
+const logoUrl = "https://dignitech25.github.io/dignitech-campaign-assets/assets/sleep-choice/logo-white.png";
+const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+const paragraphs = values => values.map(value => `<p style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${esc(value)}</p>`).join("");
+
+function render(data) {
+  const questions = data.questions.map((question, index) => `<tr><td valign="top" style="width:36px;padding:0 12px 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:bold;color:#2c2758;">${index + 1}.</td><td valign="top" style="padding:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.5;color:#111111;">${esc(question)}</td></tr>`).join("");
+  return `<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(data.subject)}</title><style>@media only screen and (max-width:620px){.email-shell{width:100%!important}.content-frame{width:100%!important}.frame-pad{padding-left:12px!important;padding-right:12px!important}.pad{padding-left:20px!important;padding-right:20px!important}.logo{width:100%!important;height:auto!important}.button{width:100%!important;box-sizing:border-box!important}}</style></head>
+<body style="margin:0;padding:0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;"><div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${esc(data.preheader)}</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border-collapse:collapse;"><tr><td align="center" style="padding:40px 0;background:#ffffff;">
+<table role="presentation" class="email-shell" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;background:#2c2758;border-collapse:collapse;">
+<tr><td align="center" style="padding:7px 15px;background:#2c2758;"><img class="logo" src="${logoUrl}" width="570" alt="Sleep Choice. Try, Sleep, Decide." style="display:block;width:570px;max-width:100%;height:auto;border:0;"></td></tr>
+<tr><td class="frame-pad" align="center" style="padding:0 26px;background:#2c2758;"><table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
+<tr><td class="pad" style="padding:24px 34px 12px;background:#ffffff;border-top:2px solid #7353ba;border-bottom:2px solid #7353ba;"><p style="margin:0 0 24px;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>${paragraphs(data.intro)}</td></tr>
+<tr><td class="pad" align="center" style="padding:18px 34px;background:#eee2ff;border-bottom:2px solid #7353ba;"><h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${esc(data.sectionTitle)}</h2></td></tr>
+<tr><td class="pad" style="padding:22px 34px 10px;background:#ffffff;border-bottom:2px solid #7353ba;">${paragraphs(data.body)}<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">${questions}</table></td></tr>
+<tr><td class="pad" style="padding:18px 34px;background:#eee2ff;border-bottom:2px solid #7353ba;"><p style="margin:0;font-size:15px;line-height:1.55;color:#2c2758;"><strong>${esc(data.boundary)}</strong></p></td></tr>
+<tr><td class="pad" align="center" style="padding:24px 34px 28px;background:#ffffff;"><h2 style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${esc(data.actionTitle)}</h2><p style="margin:0 0 22px;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${esc(data.actionText)}</p><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" bgcolor="#2c2758" style="border-radius:36px;"><a class="button" href="${esc(data.ctaUrl)}" style="display:inline-block;width:360px;padding:15px 18px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.2;font-weight:bold;color:#ffffff;text-decoration:none;background:#2c2758;border-radius:36px;box-sizing:border-box;">${esc(data.ctaLabel)}</a></td></tr></table></td></tr>
+</table></td></tr>
+<tr><td class="pad" align="center" style="padding:18px 34px;background:#2c2758;color:#ffffff;border-top:2px solid #7353ba;"><p style="margin:0 0 18px;font-size:16px;line-height:1.5;color:#ffffff;">Warm regards,</p><p style="margin:0;font-size:16px;line-height:1.5;color:#ffffff;"><strong>David 0404 593 090</strong></p><p style="margin:0 0 16px;font-size:16px;line-height:1.5;color:#ffffff;"><strong>Alex 0452 002 450</strong></p><p style="margin:0;font-size:16px;line-height:1.5;color:#ffffff;"><strong>The Sleep Choice x Supply Ministry Team</strong></p><p style="margin:0 0 20px;font-size:16px;line-height:1.5;"><a href="https://www.sleepchoice.com.au" style="color:#ffffff;text-decoration:underline;">sleepchoice.com.au</a></p><p style="margin:0 0 8px;font-size:15px;line-height:1.5;color:#ffffff;"><em>${esc(data.trialFooterText)}</em></p></td></tr>
+<tr><td class="frame-pad" align="center" style="padding:0 26px 20px;background:#2c2758;"><table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;"><tr><td class="pad" align="center" style="padding:14px 34px 16px;background:#eee2ff;color:#2c2758;border-top:2px solid #7353ba;"><p style="margin:0;font-size:14px;line-height:1.5;color:#2c2758;">Want to change how you receive these emails?</p><p style="margin:0;font-size:14px;line-height:1.5;color:#2c2758;">You can <a href="http://$[LI:UNSUBSCRIBE]$" style="color:#2c2758!important;text-decoration:underline;font-weight:bold;">Unsubscribe</a> or <a href="http://$[LI:SUB_PREF]$" style="color:#2c2758!important;text-decoration:underline;font-weight:bold;">Update your preferences</a>.</p></td></tr></table></td></tr>
+</table></td></tr></table></body></html>`;
+}
+
+for (const file of (await readdir(campaignDir)).filter(file => file.endsWith(".json"))) {
+  const data = JSON.parse(await readFile(join(campaignDir, file), "utf8"));
+  await writeFile(join(campaignDir, `${data.slug}.html`), render(data));
+}
