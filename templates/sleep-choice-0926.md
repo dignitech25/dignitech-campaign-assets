@@ -51,3 +51,12 @@ smaller `Presented with` lockup. Forté blue is restricted to the partner lockup
 clinical heading. Sleep Choice lavender and purple continue to define the content,
 event and action panels. The supplied Forté logo is stored at
 `assets/forte/forte-logo.png`.
+
+## Current footer contract, checked 3 November 2026
+
+Preserve the source footer wording, **The Sleep Choice x Supply Ministry Team**,
+alongside the existing David and Alex numbers. The current private draft validator
+requires that exact master text. A Sleep Choice-led message still uses this verified
+footer; changing the team label requires a reviewed master change. The renderer and
+local validator use the same default so local checks do not accept an arbitrary
+footer that the stored-preview check rejects.

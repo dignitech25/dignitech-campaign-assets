@@ -12,7 +12,7 @@ function render(data) {
   const questions = data.questions.map((question, index) => `<tr><td valign="top" style="width:36px;padding:0 12px 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:bold;color:#2c2758;">${index + 1}.</td><td valign="top" style="padding:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.5;color:#111111;">${esc(question)}</td></tr>`).join("");
   const boundary = data.boundary ? `<p style="margin:4px 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${esc(data.boundary)}</p>` : "";
   const actionTitle = data.actionTitle ? `<h2 style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${esc(data.actionTitle)}</h2>` : "";
-  const teamName = data.teamName || "The Sleep Choice Team";
+  const teamName = data.teamName || "The Sleep Choice x Supply Ministry Team";
   const actionLead = data.actionLead ? paragraphs([data.actionLead]) : "";
   const actionPoints = data.actionPoints?.length ? `<ul style="margin:0 0 18px;padding-left:24px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${data.actionPoints.map(value => `<li style="margin:0 0 4px;">${esc(value)}</li>`).join("")}</ul>` : "";
   return `<!doctype html>

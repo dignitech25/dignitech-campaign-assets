@@ -7,16 +7,19 @@ const dir = join(root, "campaigns", "ot-engagement-2026");
 const required = [
   "https://dignitech25.github.io/dignitech-campaign-assets/assets/sleep-choice/logo-white.png",
   "$[UD:FIRST_NAME||]$", "David 0404 593 090", "Alex 0452 002 450",
-  "sleepchoice.com.au", "$[LI:UNSUBSCRIBE]$", "$[LI:SUB_PREF]$"
+  "sleepchoice.com.au", "$[LI:UNSUBSCRIBE]$", "$[LI:SUB_PREF]$",
+  "The Sleep Choice x Supply Ministry Team"
 ];
 for (const file of (await readdir(dir)).filter(file => file.endsWith(".json"))) {
   const data = JSON.parse(await readFile(join(dir, file), "utf8"));
   const html = await readFile(join(dir, `${data.slug}.html`), "utf8");
   for (const value of required) if (!html.includes(value)) throw new Error(`${data.slug}.html: missing ${value}`);
-  const teamName = data.teamName || "The Sleep Choice Team";
+  const teamName = data.teamName || "The Sleep Choice x Supply Ministry Team";
+  if (teamName !== "The Sleep Choice x Supply Ministry Team") throw new Error(`${data.slug}: footer differs from the current approved master`);
   if (!html.includes(teamName)) throw new Error(`${data.slug}.html: missing ${teamName}`);
   if (!html.startsWith("<!doctype html>")) throw new Error(`${data.slug}.html: invalid document start`);
   if (html.includes("—")) throw new Error(`${data.slug}.html: contains an em dash`);
   if (/\{\{.+?\}\}/s.test(html)) throw new Error(`${data.slug}.html: unresolved renderer token`);
 }
 console.log("Validated OT engagement campaigns against Sleep Choice 0926 requirements.");
+
