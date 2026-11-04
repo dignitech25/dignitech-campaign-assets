@@ -6,7 +6,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const campaignDir = join(root, "campaigns", "ot-engagement-2026");
 const logoUrl = "https://dignitech25.github.io/dignitech-campaign-assets/assets/sleep-choice/logo-white.png";
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
-const paragraphs = values => values.map(value => `<p style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${esc(value)}</p>`).join("");
+const paragraphs = (values, strongValues = []) => values.map(value => `<p style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${strongValues.includes(value) ? `<strong>${esc(value)}</strong>` : esc(value)}</p>`).join("");
 
 function render(data) {
   const questions = data.questions.map((question, index) => `<tr><td valign="top" style="width:36px;padding:0 12px 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:bold;color:#2c2758;">${index + 1}.</td><td valign="top" style="padding:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.5;color:#111111;">${esc(question)}</td></tr>`).join("");
@@ -22,7 +22,7 @@ function render(data) {
 <table role="presentation" class="email-shell" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;background:#2c2758;border-collapse:collapse;">
 <tr><td align="center" style="padding:7px 15px;background:#2c2758;"><img class="logo" src="${logoUrl}" width="570" alt="Sleep Choice. Try, Sleep, Decide." style="display:block;width:570px;max-width:100%;height:auto;border:0;"></td></tr>
 <tr><td class="frame-pad" align="center" style="padding:0 26px;background:#2c2758;"><table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
-<tr><td class="pad" style="padding:24px 34px 12px;background:#ffffff;border-top:2px solid #7353ba;border-bottom:2px solid #7353ba;font-family:Arial,Helvetica,sans-serif;"><p style="margin:0 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>${paragraphs(data.intro)}</td></tr>
+<tr><td class="pad" style="padding:24px 34px 12px;background:#ffffff;border-top:2px solid #7353ba;border-bottom:2px solid #7353ba;font-family:Arial,Helvetica,sans-serif;"><p style="margin:0 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;text-align:center;color:#111111;">Hi $[UD:FIRST_NAME||]$,</p>${paragraphs(data.intro, data.introStrong)}</td></tr>
 <tr><td class="pad" align="center" style="padding:18px 34px;background:#eee2ff;border-bottom:2px solid #7353ba;"><h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;color:#2c2758;">${esc(data.sectionTitle)}</h2></td></tr>
 <tr><td class="pad" style="padding:22px 34px 10px;background:#ffffff;border-bottom:2px solid #7353ba;">${paragraphs(data.body)}<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">${questions}</table>${boundary}</td></tr>
 
