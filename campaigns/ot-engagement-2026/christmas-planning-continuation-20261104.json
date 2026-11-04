@@ -1,16 +1,15 @@
 {
   "brand": "sleep-choice-0926",
-  "subject": "Need the bed in place before Christmas?",
-  "preheader": "Allow time for the home trial, an OT review and any changes before the holiday break.",
-  "sectionTitle": "Leave time for what comes after the trial",
+  "subject": "What’s keeping that bed decision open?",
+  "preheader": "Let’s work through the next step while there’s time before Christmas.",
+  "sectionTitle": "We can pick it up from here",
   "body": [
-    "If a bed or mattress needs to be in place before Christmas, the seven nights at home are one part of the timeline. There may also be an OT review, funding approval, a final quote and delivery to arrange.",
-    "For the person and their family, having the setup settled can mean one less worry heading into the break.",
-    "We can help work through the equipment options, organise the home trial and coordinate quotes and delivery planning."
+    "If we already have the brief or quote, just send the reference. Add the date the person needs the equipment in place.",
+    "We’ll help work through the options, check availability and work out the next step."
   ],
   "questions": [],
-  "actionTitle": "Let’s work backwards from when it’s needed",
-  "actionText": "If a trial or quote is already underway, let us know where it is up to. We’ll help identify the next practical step, check availability and confirm what timing is realistic for that setup before Christmas.",
+  "actionTitle": "Allow time to act on the trial",
+  "actionText": "If Christmas is the goal, starting that work now gives us more room to respond to what the trial shows.",
   "ctaLabel": "DISCUSS A BED OR MATTRESS NEED",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Bed%20or%20mattress%20before%20Christmas",
   "boundary": "",
@@ -18,13 +17,9 @@
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case.",
   "slug": "christmas-planning-continuation-20261104",
   "intro": [
-    "A home trial can change the plan. The mattress may not suit, a transfer may need another look, or the family may want to try a different option.",
-    "That is useful to find out while there is still time to work through it."
+    "If a bed or mattress decision is still unresolved, reply with a few de-identified lines about what is holding it up.",
+    "It could be the equipment choice, a trial that needs another look or a quote that needs updating."
   ],
-  "actionLead": "You do not need to have chosen the exact bed or mattress to start. Reply with a few de-identified lines about:",
-  "actionPoints": [
-    "What needs to change",
-    "The suburb where it is needed",
-    "The date you are working towards"
-  ]
+  "actionLead": "Seven nights at home may be followed by an OT review, equipment changes, funding decisions and delivery arrangements.",
+  "actionPoints": []
 }
