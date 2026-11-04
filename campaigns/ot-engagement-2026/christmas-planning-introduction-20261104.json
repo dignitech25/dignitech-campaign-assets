@@ -1,16 +1,15 @@
 {
   "brand": "sleep-choice-0926",
-  "subject": "Need the bed in place before Christmas?",
-  "preheader": "Allow time for the home trial, an OT review and any changes before the holiday break.",
-  "sectionTitle": "Leave time for what comes after the trial",
+  "subject": "You don’t need the bed chosen to start.",
+  "preheader": "Tell us what needs to change at home. We’ll help work through the equipment options.",
+  "sectionTitle": "Seven nights in their own home",
   "body": [
-    "If a bed or mattress needs to be in place before Christmas, the seven nights at home are one part of the timeline. There may also be an OT review, funding approval, a final quote and delivery to arrange.",
-    "For the person and their family, having the setup settled can mean one less worry heading into the break.",
-    "We can help work through the equipment options, organise the home trial and coordinate quotes and delivery planning."
+    "The person can use the proposed setup in their own bedroom. Their OT can assess how it works for the transfers, positioning and daily routines that matter.",
+    "We help organise equipment options, trial arrangements and quotes. If another option needs exploring, we help work through that too."
   ],
   "questions": [],
-  "actionTitle": "Let’s work backwards from when it’s needed",
-  "actionText": "If a trial or quote is already underway, let us know where it is up to. We’ll help identify the next practical step, check availability and confirm what timing is realistic for that setup before Christmas.",
+  "actionTitle": "Tell us what needs to be easier",
+  "actionText": "If equipment is needed before Christmas, include the date so we can check availability and plan the next steps.",
   "ctaLabel": "DISCUSS A BED OR MATTRESS NEED",
   "ctaUrl": "mailto:david@sleepchoice.com.au?subject=Bed%20or%20mattress%20before%20Christmas",
   "boundary": "",
@@ -18,13 +17,14 @@
   "trialFooterText": "Seven-night in-home trial availability, service area, equipment configuration and individual arrangements are confirmed per case.",
   "slug": "christmas-planning-introduction-20261104",
   "intro": [
-    "At Sleep Choice, we work with OTs, care teams and families to arrange seven-night therapeutic bed and mattress trials in the person’s home.",
-    "The trial gives the person and their OT time to assess the setup in daily use. If a different option is needed, it helps to have time to work through that too."
+    "You may know exactly what needs to improve at home, while the right bed and mattress are still undecided.",
+    "It might be a difficult transfer, repositioning overnight, or making enough room for a carer to help.",
+    "You can bring us the brief at that stage.",
+    "I’m David from Sleep Choice. We arrange seven-night therapeutic bed and mattress trials in the person’s home, working alongside their OT, family and care team."
   ],
-  "actionLead": "You do not need to have chosen the exact bed or mattress to start. Reply with a few de-identified lines about:",
-  "actionPoints": [
-    "What needs to change",
-    "The suburb where it is needed",
-    "The date you are working towards"
+  "actionLead": "Reply with a few de-identified lines about the problem and the suburb. You don’t need to have selected a product.",
+  "actionPoints": [],
+  "introStrong": [
+    "You can bring us the brief at that stage."
   ]
 }
