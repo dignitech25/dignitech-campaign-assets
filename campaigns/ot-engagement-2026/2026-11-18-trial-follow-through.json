@@ -23,5 +23,6 @@
   "ctaUrl": "mailto:david@supplyministry.com.au?subject=Equipment%20question",
   "teamName": "The Sleep Choice x Supply Ministry Team",
   "trialFooterText": "In-home trial options and availability depend on the equipment and service area.",
-  "blendPreferenceFooter": true
+  "blendPreferenceFooter": true,
+  "deepPurpleBackground": true
 }

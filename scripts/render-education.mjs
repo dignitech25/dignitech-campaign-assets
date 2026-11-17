@@ -9,6 +9,7 @@ const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt
 const paragraphs = (values, strongValues = []) => values.map(value => `<p style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${strongValues.includes(value) ? `<strong>${esc(value)}</strong>` : esc(value)}</p>`).join("");
 
 function render(data) {
+  const outerBackground = data.deepPurpleBackground ? "#2c2758" : "#ffffff";
   const preferenceBackground = data.blendPreferenceFooter ? "#2c2758" : "#eee2ff";
   const preferenceColour = data.blendPreferenceFooter ? "#ffffff" : "#2c2758";
   const preferenceBorder = data.blendPreferenceFooter ? "none" : "2px solid #7353ba";
@@ -20,8 +21,8 @@ function render(data) {
   const actionPoints = data.actionPoints?.length ? `<ul style="margin:0 0 18px;padding-left:24px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.55;color:#111111;text-align:left;">${data.actionPoints.map(value => `<li style="margin:0 0 4px;">${esc(value)}</li>`).join("")}</ul>` : "";
   return `<!doctype html>
 <html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(data.subject)}</title><style>@media only screen and (max-width:620px){.email-shell{width:100%!important}.content-frame{width:100%!important}.frame-pad{padding-left:12px!important;padding-right:12px!important}.pad{padding-left:20px!important;padding-right:20px!important}.logo{width:100%!important;height:auto!important}.button{width:100%!important;box-sizing:border-box!important}}</style></head>
-<body style="margin:0;padding:0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;"><div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${esc(data.preheader)}</div>
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border-collapse:collapse;"><tr><td align="center" style="padding:40px 0;background:#ffffff;">
+<body bgcolor="${outerBackground}" style="margin:0;padding:0;background:${outerBackground};font-family:Arial,Helvetica,sans-serif;"><div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${esc(data.preheader)}</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${outerBackground}" style="width:100%;background:${outerBackground};border-collapse:collapse;"><tr><td align="center" bgcolor="${outerBackground}" style="padding:40px 0;background:${outerBackground};">
 <table role="presentation" class="email-shell" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;background:#2c2758;border-collapse:collapse;">
 <tr><td align="center" style="padding:7px 15px;background:#2c2758;"><img class="logo" src="${logoUrl}" width="570" alt="Sleep Choice. Try, Sleep, Decide." style="display:block;width:570px;max-width:100%;height:auto;border:0;"></td></tr>
 <tr><td class="frame-pad" align="center" style="padding:0 26px;background:#2c2758;"><table role="presentation" class="content-frame" width="548" cellspacing="0" cellpadding="0" border="0" style="width:548px;max-width:548px;border-collapse:collapse;">
