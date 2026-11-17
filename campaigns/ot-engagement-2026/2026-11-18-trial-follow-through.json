@@ -28,5 +28,6 @@
   "cleanFrame": true,
   "highlightHeading": true,
   "highlightCta": false,
-  "ctaBand": true
+  "ctaBand": true,
+  "logoLink": "https://www.sleepchoice.com.au"
 }
