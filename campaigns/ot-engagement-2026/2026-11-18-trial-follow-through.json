@@ -27,5 +27,6 @@
   "deepPurpleBackground": true,
   "cleanFrame": true,
   "highlightHeading": true,
-  "highlightCta": true
+  "highlightCta": false,
+  "ctaBand": true
 }
