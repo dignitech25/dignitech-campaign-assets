@@ -25,5 +25,7 @@
   "trialFooterText": "In-home trial options and availability depend on the equipment and service area.",
   "blendPreferenceFooter": true,
   "deepPurpleBackground": true,
-  "cleanFrame": true
+  "cleanFrame": true,
+  "highlightHeading": true,
+  "highlightCta": true
 }
