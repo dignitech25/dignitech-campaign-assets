@@ -1,0 +1,26 @@
+{
+  "brand": "supply-ministry",
+  "slug": "ms-smith-christmas-20261125",
+  "subject": "Can Ms. Smith afford to wait?",
+  "preheader": "Some equipment may still arrive before Christmas. It is worth checking what's possible now.",
+  "intro": [
+    "Christmas deadlines have a way of turning an equipment request into a January problem.",
+    "That might look like a few weeks on a calendar. It can feel very different for the person waiting at home."
+  ],
+  "sectionTitle": "Can Ms. Smith afford to wait?",
+  "body": [
+    "This week, a supplier told us an order for a chair needs to be placed by the end of November to meet its planned pre-Christmas delivery window.",
+    "Not every piece of equipment will make it. But before we write off December, it's worth finding out what can still be sourced and delivered."
+  ],
+  "secondTitle": "The product is only part of the timing",
+  "secondBody": [
+    "Stock, size, configuration, accessories and delivery access can each change the answer. We can check availability, look at viable alternatives and coordinate the practical details."
+  ],
+  "actionTitle": "Is there someone still waiting?",
+  "actionBody": [
+    "Send us the equipment request, the suburb and the date it's needed. A de-identified brief is enough to start.",
+    "We'll check the options and tell you what can realistically be arranged before Christmas."
+  ],
+  "ctaLabel": "CHECK EQUIPMENT OPTIONS",
+  "ctaUrl": "mailto:david@supplyministry.com.au?subject=Equipment%20options%20before%20Christmas"
+}
